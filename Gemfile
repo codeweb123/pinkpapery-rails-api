@@ -18,6 +18,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'fast_jsonapi'
 gem 'stripe'
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
+gem 'dotenv-rails'
 
 
 # Use Active Storage variant
