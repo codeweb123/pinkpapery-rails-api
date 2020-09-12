@@ -4,7 +4,6 @@ class CategoriesController < ApplicationController
     # GET /categories
     def index
       @categories = Category.all
-  
       render json: @categories, include: [:items]
     end
   
@@ -47,6 +46,6 @@ class CategoriesController < ApplicationController
   
       # Only allow a trusted parameter "white list" through.
       def category_params
-        params.require(:category).permit(:title, :routeName)
+        params.require(:category).permit(:id, :title, :routeName)
       end
   end
