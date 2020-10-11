@@ -24,12 +24,26 @@ class ItemsController < ApplicationController
   
     # PATCH/PUT /items/1
     def update
-      if @item.update(item_params)
-        render json: @item
-      else
+      #byebug
+      
+      @item = Item.find(params[:id])
+      @item.update(item_params)
+      if @item.errors
+        #byebug
         render json: @item.errors
+      else
+        #byebug
+        render json: @item
       end
+      #byebug
     end
+      #byebug
+      #if @item.update(item_params)
+      #  render json: @item
+      #else
+      #  render json: @item.errors
+      #end
+    #end
   
     # DELETE /items/1
     def destroy
