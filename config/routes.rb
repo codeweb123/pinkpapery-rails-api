@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope '/api/v1' do
     resources :categories
     resources :items
+    resources :creations
   end
 end
 

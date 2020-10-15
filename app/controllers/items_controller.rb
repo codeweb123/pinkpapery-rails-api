@@ -21,21 +21,16 @@ class ItemsController < ApplicationController
         render json: @item.errors
       end
     end
-  
+  #byebug
     # PATCH/PUT /items/1
     def update
-      #byebug
-      
       @item = Item.find(params[:id])
-      @item.update(item_params)
-      if @item.errors
-        #byebug
+      @item.update_attributes(item_params)
+      if @item.errors 
         render json: @item.errors
       else
-        #byebug
         render json: @item
       end
-      #byebug
     end
       #byebug
       #if @item.update(item_params)

@@ -4,7 +4,9 @@ class CategoriesController < ApplicationController
     # GET /categories
     def index
       @categories = Category.all
-      render json: @categories, include: [:items]
+      render json: @categories, :include => {
+        items: {}
+      }
     end
   
     # GET /categories/1
@@ -49,3 +51,8 @@ class CategoriesController < ApplicationController
         params.require(:category).permit(:id, :title, :routeName)
       end
   end
+
+  # def index
+  #   @categories = Category.all
+  #   render json: @categories, include: [:items]
+  # end

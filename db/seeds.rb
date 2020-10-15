@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
 Category.destroy_all
 Item.destroy_all
+Creation.destroy_all
 
  #5 Categories
 stationary = Category.create(title: 'Custom Stationary', routeName: 'stationary')
@@ -68,6 +68,17 @@ Categoryitem.create(category: card, item: mandalorian)
 Categoryitem.create(category: card, item: dog)
 Categoryitem.create(category: card, item: beach)
 Categoryitem.create(category: card, item: happy)
+
+#9 Creations
+birthday = Creation.create(title: 'Birthday Cards', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/61cfr1tz5sL._AC_SL1000_.jpg', author: 'Jiyon')
+anniversary = Creation.create(title: 'Happy Anniversary', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/81kLeL6M1iL._AC_SL1500_.jpg', author: 'Sally')
+celebrate = Creation.create(title: 'Celebrate', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/81SvawP6YRL._AC_SL1500_.jpg', author: 'Madeline')
+hello = Creation.create(title: 'Hello', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/81KuWECXgXL._AC_SL1500_.jpg', author: 'Claire')
+flower = Creation.create(title: 'Flower', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/910f0EPpq2L._AC_SL1500_.jpg', author: 'Carol')
+note = Creation.create(title: 'Handmade', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/61bBqSx3YeL._AC_SL1001_.jpg', author: 'Sunny')
+abstract = Creation.create(title: 'Abstract', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/81eM1XLnqlL._AC_SL1500_.jpg', author: 'Cherie')
+mom = Creation.create(title: 'Mom', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/81pUCfwPFSL._AC_SL1500_.jpg', author: 'Tasha')
+holiday = Creation.create(title: 'Holiday', imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/61s2TWWRG1L._AC_SL1000_.jpg', author: 'Bo')
 
 puts "--------seeded-----------"
               
