@@ -1,9 +1,9 @@
 module Api::V1
-
-class CategoriesitemsController < ApplicationController
+  
+  class CategoriesitemsController < ApplicationController
     before_action :set_categoryitems, only: [:show, :update, :destroy]
 
-def index
+  def index
     @categoryitems = Categoryitem.all
   end
 
@@ -60,5 +60,4 @@ def index
   end
 
 end
-
 end
