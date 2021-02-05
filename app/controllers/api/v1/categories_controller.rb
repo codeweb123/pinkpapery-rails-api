@@ -1,4 +1,6 @@
-class CategoriesController < ApplicationController
+module Api::V1
+
+  class CategoriesController < ApplicationController
     before_action :set_category, only: [:show, :update, :destroy]
   
     # GET /categories
@@ -51,8 +53,4 @@ class CategoriesController < ApplicationController
         params.require(:category).permit(:id, :title, :routeName)
       end
   end
-
-  # def index
-  #   @categories = Category.all
-  #   render json: @categories, include: [:items]
-  # end
+end

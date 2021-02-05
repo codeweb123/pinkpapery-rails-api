@@ -1,0 +1,25 @@
+{
+  "name": "pink-papery-rails-backend-api",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeweb123/pinkpapery-rails-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeweb123/pinkpapery-rails-api/issues"
+  },
+  "homepage": "https://github.com/codeweb123/pinkpapery-rails-api#readme"
+}

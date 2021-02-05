@@ -1,4 +1,6 @@
-class CategoriesController < ApplicationController
+module Api::V1
+
+class CategoriesitemsController < ApplicationController
     before_action :set_categoryitems, only: [:show, :update, :destroy]
 
 def index
@@ -56,5 +58,7 @@ def index
   def categoryitem_params
     params.require(:categoryitem).permit(:category_id, :item_id)
   end
+
+end
 
 end

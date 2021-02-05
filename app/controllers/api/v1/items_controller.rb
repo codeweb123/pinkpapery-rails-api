@@ -1,3 +1,4 @@
+module Api::V1
 class ItemsController < ApplicationController
     before_action :set_item, only: [:show, :update, :destroy]
   
@@ -57,3 +58,4 @@ class ItemsController < ApplicationController
         params.require(:item).permit(:id, :title, :name, :imageUrl, :price, :quantity, :category_id)
       end
   end
+end
