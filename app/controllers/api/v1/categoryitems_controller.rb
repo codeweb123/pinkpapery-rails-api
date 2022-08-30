@@ -1,6 +1,6 @@
 module Api::V1
   
-  class CategoriesitemsController < ApplicationController
+  class CategoryitemsController < ApplicationController
     before_action :set_categoryitems, only: [:show, :update, :destroy]
 
   def index
